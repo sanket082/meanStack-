@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="notes">
+    <h1 id="recentHeader">Recent Notes</h1>
+    <hr>
+    <ul>
+        <a *ngIf="recentNotes.length >= 1" (click)="onClick(recentNotes[0])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{recentNotes[0]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{recentNotes[0]['dateCreated']}}</span><br><br>
+                <div *ngIf="recentNotes[0]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!recentNotes[0]['important']"><img src="assets/456.png" height="30px" width="30px"></div>      </li>
+        </a>
+        <a *ngIf="recentNotes.length >= 2" (click)="onClick(recentNotes[1])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{recentNotes[1]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{recentNotes[1]['dateCreated']}}</span><br><br>
+                <div *ngIf="recentNotes[1]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!recentNotes[1]['important']"><img src="assets/456.png" height="30px" width="30px"></div>  </li>
+        </a>
+        <a *ngIf="recentNotes.length >= 3" (click)="onClick(recentNotes[2])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{recentNotes[2]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{recentNotes[2]['dateCreated']}}</span><br><br>
+                <div *ngIf="recentNotes[2]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!recentNotes[2]['important']"><img src="assets/456.png" height="30px" width="30px"></div>  </li>
+ 
+        </a>
+    </ul>
+</div>
+
+<div class="notes">
+    <hr>
+    <h1 id="favoriteHeader">Favorite Notes</h1>
+    <ul *ngFor="let notes of favoriteNotes">
+        <a *ngIf="notes.length >= 1" (click)="onClick(notes[0])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{notes[0]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{notes[0]['dateCreated']}}</span><br><br>
+                <div *ngIf="notes[0]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!notes[0]['important']"><img src="assets/456.png" height="30px" width="30px"></div> 
+           </li>
+        </a>
+        <a *ngIf="notes.length >= 2" (click)="onClick(notes[1])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{notes[1]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{notes[1]['dateCreated']}}</span><br><br>
+                <div *ngIf="notes[1]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!notes[1]['important']"><img src="assets/456.png" height="30px" width="30px"></div>    </li>
+        </a>
+        <a *ngIf="notes.length >= 3" (click)="onClick(notes[2])">
+            <li>
+                <span><span style="font-weight: bold;">Title: </span>{{notes[2]['title']}}</span><br><br>
+                <span><span style="font-weight: bold;">Date: </span>{{notes[2]['dateCreated']}}</span><br><br>
+                <div *ngIf="notes[2]['important']"><img src="assets/123.png" height="30px" width="30px"></div>
+                <div *ngIf="!notes[2]['important']"><img src="assets/456.png" height="30px" width="30px"></div>  </li>
+        </a>
+    </ul>
+</div>
+<app-view-note *ngIf="noteViewVisible" [note]="currentNote" (closeNote)="closeNote()"></app-view-note>

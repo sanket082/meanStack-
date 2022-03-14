@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<h1 id="title">Note Editor</h1>
+<hr>
+<form [formGroup]="noteForm" (ngSubmit)="onSave()">
+    <table>
+        <tr>
+            <td class="label"><label>Title: </label></td>
+            <td><textarea formControlName="title" id="title" style="resize: none" rows="1" cols="120"></textarea></td>
+            <td><span *ngIf=""></span></td>
+        </tr>
+        <tr>
+            <td class="label"><label>Note Body: </label></td>
+            <td><div id="bodyDiv"><textarea formControlName="body" id="body" style="resize: none" cols="120">{{currentNote['body']}}</textarea></div></td>
+            <td><span *ngIf=""></span></td>
+        </tr>
+        <tr>
+            <td class="label"><label>Favorite: </label></td>
+            <td><input checked="currentNote['important']" formControlName="favorite" type="checkbox" id="favorite"></td>
+        </tr>
+    </table>
+    <button id="cancel" (click)="onCancel()">Cancel</button>
+    <button [disabled]="noteForm.invalid" id="save" type="submit">Save</button>
+</form>

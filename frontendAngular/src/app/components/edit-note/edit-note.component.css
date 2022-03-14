@@ -1,0 +1,44 @@
+h1 {
+    margin: 10px 0px 10px 10px;
+    padding: 0px;
+    font-family: 'Garamond', serif;
+}
+
+form {
+    margin: 10px 0px 10px 10px;
+    padding: 0px;
+    font-family: 'Courier New', monospace;
+}
+
+
+input, textarea {
+    font-family: 'Garamond', serif;
+    border-radius: 10%;
+}
+
+form .label {
+    vertical-align: text-top;
+}
+
+#bodyDiv {
+    height: 300px;
+}
+
+#bodyDiv textarea {
+    height: 98%;
+}
+
+#cancel, #save {
+    vertical-align: bottom;
+    background-color:   rgb(127, 141, 47);
+    border: solid 1px;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    margin: 40px 10px 0px 0px;
+    font-family: 'Garamond', serif;
+}
+
+#cancel:hover, #save:hover {
+    background-color: rgb(209, 241, 245);
+}

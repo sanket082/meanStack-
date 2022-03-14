@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    margin: 0px 0px 10px 0px;
+    padding: 20px 0px 20px 0px;
+    border:dotted;
+    border-color:rgb(127, 141, 47);
+    background-color: rgb(139, 104, 8);
+}
+
+li {
+    display: unset;
+    
+    text-align: left;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px 0px 20px;
+    font-family: 'Garamond', serif;
+    font-size: 18px;
+}
+
+#logout {
+    display: unset;
+    float: right;
+    padding-right: 10px;
+}

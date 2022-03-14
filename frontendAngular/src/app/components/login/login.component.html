@@ -1,0 +1,25 @@
+<ul>
+    <li style="margin-left: 20px;"><a>Login</a></li>
+    
+</ul>
+
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <table class="loginTable">
+        <h1>Login</h1>
+        <tr>
+            <td><label>Username:</label></td>
+            <td><input type="text" formControlName="username"></td>
+            <td><span style="color: red" *ngIf="loginForm.controls['username'].touched && loginForm.controls['username'].errors?.['required']"> Username is required.</span></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" formControlName="password"></td>
+            <td><span style="color: red" *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors?.['required']"> Password is required.</span></td>
+        </tr>
+        <tr>
+            <td><br><button type="submit" [disabled]="loginForm.invalid">Login</button></td>
+            <td><span style="color: red" *ngIf="wrongPassword">Incorrect username or password.</span></td>
+        </tr>
+        <br><a href="/register">Register New User</a>
+    </table>
+</form>

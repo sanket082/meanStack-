@@ -1,0 +1,32 @@
+<ul>
+    <li style="margin-left: 20px;"><a>Register</a></li>
+    
+</ul>
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <table class="registerTable">
+        <h1>Register</h1>
+        <tr>
+            <td><label>Username:</label></td>
+            <td><input type="text" formControlName="username"></td>
+            <td><span style="color: red" *ngIf="registerForm.controls['username'].touched && registerForm.controls['username'].errors?.['required']"> Username is required.</span></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" formControlName="password"></td>
+            <td><span style="color: red" *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].errors?.['required']"> Password is required.</span></td>
+        </tr>
+        <tr>
+            <td><label>Confirm Password:</label></td>
+            <td><input type="password" formControlName="confirmPassword"></td>
+            <td>
+                <span style="color: red" *ngIf="registerForm.errors?.['matchingError']">Passwords don't match.</span>
+            </td>
+        </tr>
+        <tr>
+            <td><br><button type="submit" [disabled]="registerForm.invalid">Register</button></td>
+        </tr>
+        <tr>
+            <td><br><a href="/login">Existing User</a></td>
+        </tr>
+    </table>
+</form>

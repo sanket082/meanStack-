@@ -1,0 +1,95 @@
+#popup {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    background-color: rgb(239, 239, 239);
+    border: solid 1px;
+    border-radius: 5%;
+    text-align: left;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#exit {
+    position: absolute;
+    left: 98%;
+    font-size: 24px;
+    color: rgb(176, 176, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    z-index: 2;
+}
+
+#exit:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+table {
+    position: relative;
+    padding-left: 0.05%;
+    width: 99.9%;
+    height: 100%;
+    padding: 5px;
+    overflow: auto;
+}
+
+td {
+    vertical-align: top;
+    padding-top: 10px;
+   
+    font-size: 18px;
+}
+
+.row1 {
+    position: relative;
+    width: 120px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.row2 {
+    background-color: white;
+}
+
+#titleRow td{
+    background-color:  rgb(127, 141, 47);
+    height: 10px;
+}
+
+#titleRow h1 {
+    color: white;
+}
+
+#buttonRow {
+    height: 20px;
+    
+}
+
+#dateRow, #favoriteRow {
+    height: 20px;
+}
+
+#noteBody {
+    overflow: auto;
+}
+
+#edit, #delete {
+    vertical-align: bottom;
+    background-color: white;
+    border: solid 1px;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    margin: 40px 10px 0px 0px;
+    font-family: 'Garamond', serif;
+}
+
+#edit:hover, #delete:hover {
+    background-color: rgb(209, 241, 245);
+}
+#buttonRow button{
+    background-color:   rgb(127, 141, 47);
+}

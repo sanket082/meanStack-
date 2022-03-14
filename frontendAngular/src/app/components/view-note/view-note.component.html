@@ -1,0 +1,24 @@
+<div id="popup">
+    <span id="exit" (click)="onClose()">x</span>
+    <table>
+        <tr id="titleRow">
+            <td colspan="2"><h1 id="title">{{note.title}}</h1></td>
+        </tr>
+        <tr id="dateRow">
+            <td class="row1"><label>Date Created: </label></td>
+            <td class="row2"><span id="date">{{note.dateCreated}}</span></td>
+        </tr>
+        <tr id="favoriteRow">
+            <td class="row1"><label>Favorite: </label></td>
+            <td class="row2"><span id="favorite">{{note.important}}</span></td>
+        </tr>
+        <tr id="noteRow">
+            <td class="row1"><label>Note Body: </label></td>
+            <td class="row2" id="tdNoteBody">{{note.body}}</td>
+        </tr>
+        <tr id="buttonRow">
+            <td id="tdEdit"><button id="edit" (click)="edit()">Edit</button></td>
+            <td id="tdDelete"><button id="delete" (click)="del()">Delete</button></td>
+        </tr>
+    </table>
+</div>
