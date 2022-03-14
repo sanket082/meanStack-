@@ -1,0 +1,2 @@
+# meanStack-
+Meanstack application
