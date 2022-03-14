@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const port = 3000;
 const dbName = "notes";
-const connection = "mongodb://127.0.0.1:27017/"+dbName;
+const connection = "mongodb+srv://Sanket:Codegeass@cluster0.cyaze.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 // Set the server's use statements
 app.use(express.json());
